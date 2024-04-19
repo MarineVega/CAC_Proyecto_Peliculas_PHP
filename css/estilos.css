@@ -1,0 +1,17 @@
+/*SINTAXIS BASICA DE CSS:
+
+selector {
+    propiedad:valor;
+    propiedad:valor;
+    n...
+}
+3 selectores basicos
+id: #id
+clase: .clase
+etiqueta: etiqueta
+*/
+
+h1{
+    /*la propiedad color le da color a la fuente*/
+    color: violet;
+}
