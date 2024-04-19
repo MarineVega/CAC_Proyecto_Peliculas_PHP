@@ -11,7 +11,116 @@ clase: .clase
 etiqueta: etiqueta
 */
 
-h1{
-    /*la propiedad color le da color a la fuente*/
-    color: violet;
+/* Cómo organizar un archivo CSS*/
+/*importaciones de fuentes*/
+/*las animaciones*/
+/*reseteo de valores*/
+/* regla font-face para fuente descargada*/
+@font-face {
+    font-family: 'VarelaRound';
+    src: url(../assets/fonts/VarelaRound-Regular.ttf);
+}
+
+/*configuracion de usuario root*/
+/*clases utilitarias con sus valores*/
+/*estilos generales
+header 
+nav
+link
+main
+section
+footer
+*/
+
+/* orden de especificidad del + al -
+id > clase > etiqueta
+*/
+
+/*      * es el selector universal */
+/*reseteo de valores*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'VarelaRound', sans-serif;     /* font-family: 'Nunito', sans-serif; */
+}
+
+/*configuración de variables*/
+/* colores:
+37392E
+19647E
+28AFB0
+DDCECD
+EEE5E5*/
+:root{
+    --color-principal: #37392E;
+    --color-secundario: #19647E;
+    --color-terciario: #28AFB0;                   /* #850f0f */
+    --color-cuarto: #DDCECD;                  /* #840404bc */
+    --color-quinto: #EEE5E5;
+}
+
+/*estilos del body*/
+body{
+    background-color: #181419;
+    color: var(--color-secundario);
+}
+
+header, footer{
+    background-color: var(--color-secundario);
+    /*color: var(--color-principal);*/
+    padding: 0 20px 10px;
+}
+
+/* estilos del header */
+.header{
+    /*height: 15vh;*/
+    position: sticky;
+    top: 0;
+    nav{        
+        height: 100%;
+        display: flex;
+        align-items:end;
+        justify-content: space-between;
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            color: var(--color-quinto);
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            column-gap: 20px;
+        }
+    }
+}
+
+ /* estilos del footer */
+ .footer{
+    padding: 20px;
+    nav{ 
+        height: 100%;               
+        display: flex;
+        justify-content: center;
+        ul{
+            list-style: none;
+            text-decoration: none;
+            display: flex;
+            column-gap: 20px;            
+        }  
+        a{
+            text-decoration: none;
+            color: var(--color-quinto);
+        }        
+    }
+ }
+
+ .flechaArriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    /* cursor: pointer;     */
 }

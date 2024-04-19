@@ -6,23 +6,29 @@
         <title>VideoPlay - Catalogo de Peliculas</title>
         <!-- etiqueta del ícono de la página web -->
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <script src="https://kit.fontawesome.com/8d7fd510d4.js" crossorigin="anonymous"></script>
+        <!-- estilos de CSS -->
+        <link rel="stylesheet" href="./css/estilos.css">
     </head>
     <!--etiqueta contenedora de la estructura semantica de la pagina web que vera el usuario-->
     <body>
-        <header>
-            <!--etiqueta contenedora de la nav-->
-            
-            esta es la cabecera
+        <!-- <header class="header"> -->
+        
+        <header class="header">
+            <!--etiqueta contenedora de la nav-->             
+            <!-- <nav class="contenedorNavegacion"> -->
             <nav>
+                <!-- <a class="anclaLogo" href="#">    se llama a sí misma -->
 
-                <a href="#">    <!-- se llama a sí misma -->
+                <a href="#">  
                     <img src="./assets/img/Logo_VideoPlay.png" alt="Logo VideoPlay" width="100x" loading="lazy">
-                    <!-- loading="lazy" -> aplaza la carga de imágenes hasta que son necesarias -->                    
+                    <!-- loading="lazy" -> aplaza la carga de imágenes hasta que son necesarias --> 
+                    <span>VideoPlay</span>
                 </a>
-             
-                <ul>
+                <!-- <ul class="navegacion"> -->
+                <ul> 
                     <li>
-                        <a href="">Tendencia</a>
+                        <a href="#tendencia">Tendencia</a>
                     </li>
                     <li>
                         <a href="./pages/registrarse.html">Registrarse</a>
@@ -32,9 +38,9 @@
                     </li>
                 </ul>
 
-
             </nav>
         </header>
+
         <main>
             <!-- Sección Principal -->
             <section id="principal">
@@ -98,22 +104,27 @@
                 <img src="./assets/img/aclamada_4.jpeg" alt="Transformers">
             </section>
         </main>
-        <footer>
+
+        <footer class="footer">
            <nav>
-            <ul>
-                <li>
-                    <a href="">Términos y condiciones</a>
-                </li>
-                <li>
-                    <a href="">Preguntas frecuentes</a>
-                </li>
-                <li>
-                    <a href="">Ayuda</a>
-                </li>
-                <li>
-                    <a href="">Administrador Pelícuas</a>
-                </li>
-            </ul>
+                <ul>
+                    <li>
+                        <a href="">Términos y condiciones</a>
+                    </li>
+                    <li>
+                        <a href="">Preguntas frecuentes</a>
+                    </li>
+                    <li>
+                        <a href="">Ayuda</a>
+                    </li>
+                    <li>
+                        <a href="">Administrador Películas</a>
+                    </li>
+                </ul>
+
+                <a href="#principal" class="flechaArriba">
+                    <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                </a>
            </nav>
         </footer>
         
