@@ -72,6 +72,10 @@ header, footer{
     padding: 0 20px 10px;
 }
 
+hr{
+    color: var(--color-secundario);
+}
+
 /* estilos del header */
 .header{
     /*height: 15vh;*/
@@ -96,6 +100,24 @@ header, footer{
         }
     }
 }
+
+/* estilos del main */
+.main{
+    .tendencias{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        div{
+            padding: 20px;
+        }
+    }
+    
+    img{
+        width: 300px;
+    }
+}
+
 
  /* estilos del footer */
  .footer{
