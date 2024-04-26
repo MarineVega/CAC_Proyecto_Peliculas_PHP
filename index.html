@@ -12,14 +12,12 @@
     </head>
     <!--etiqueta contenedora de la estructura semantica de la pagina web que vera el usuario-->
     <body>
-        <!-- <header class="header"> -->
-        
+        <!-- <header class="header"> -->        
         <header class="header">
             <!--etiqueta contenedora de la nav-->             
             <!-- <nav class="contenedorNavegacion"> -->
             <nav>
                 <!-- <a class="anclaLogo" href="#">    se llama a sí misma -->
-
                 <a href="#">  
                     <img src="./assets/img/Logo_VideoPlay.png" alt="Logo VideoPlay" width="100x" loading="lazy">
                     <!-- loading="lazy" -> aplaza la carga de imágenes hasta que son necesarias --> 
@@ -27,108 +25,87 @@
                 </a>
                 <!-- <ul class="navegacion"> -->
                 <ul> 
-                    <li>
-                        <a href="#tendencia">Tendencia</a>
-                    </li>
-                    <li>
-                        <a href="./pages/registrarse.html">Registrarse</a>
-                    </li>
-                    <li>
-                        <a href="./pages/inicioSesion.html">Iniciar Sesión</a>
-                    </li>
+                    <li><a href="#tendencias">Tendencias</a></li>
+                    <li><a href="#aclamadas">Aclamadas</a></li>
+                    <li><a href="./pages/registrarse.html">Registrarse</a></li>
+                    <li><a href="./pages/inicioSesion.html">Iniciar Sesión</a></li>
                 </ul>
-
             </nav>
         </header>
 
-        <main class="main">
+        <main id="main">
             <!-- Sección Principal -->
-            <section id="principal">
-                <h1>Las Películas y Series que vos buscás</h1>
-
-                <h2>Disfruta donde quieras.</h2>
-                <br>
-                <h2>Compartilo con quien quieras.</h2>
-                <a href="./pages/registrarse.html">Registrate</a>
+            <!-- <section id="principal"> -->
+            <section class="seccionTitulos"> 
+                <div class="contenedorTitulos">
+                    <h1>Las Películas y Series <br> que vos buscás</h1>
+                    <h2>Disfruta donde quieras.<br>Compartilo con quien quieras.</h2>
+                    <a href="./pages/registrarse.html">Registrate</a>
+                </div>
             </section>
 
             <!-- Sección Búsqueda -->
-            <section id="busqueda">
-                <h2>¿Qué te gustaría ver?</h2>
-                <form action="">
-                    <input type="text" name="buscar" id="buscar" placeholder="Buscar..." required>
-                    <input type="submit" name="btnBuscar" id="btnBuscar" value="Buscar" >
-                </form>
+            <!-- <section id="busqueda"> -->
+            <section class="seccionBusqueda">
+                <div class="contenedorBusqueda">
+                    <h2>¿Qué te gustaría ver?</h2>
+                    <form>
+                        <input type="text" name="buscar" id="buscar" placeholder="Buscar..." required class="inputBuscador">
+                        <input type="submit" name="btnBuscar" id="btnBuscar" value="Buscar" class="btnBuscador" >
+                    </form>
+                    </div>            
             </section>
+
             <hr>
             <!-- Sección Tendencias -->
-            <section class="tendencias">
+            <section id="tendencias" class="peliculasTendencias">
                 <h2>Tendencias de hoy!</h2>
-                <div>
-                    <a href="./pages/detalle.html">
-                        <img src="./assets/img/tendencia_1.jpeg" alt="Wonka">
-                        
-                    </a>
-                    <h3>Wonka</h3>
+                <div class="galeriaTendencias">
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_1.jpeg" alt="tendencia_1" loading="lazy"></a></div>          
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_2.jpeg" alt="tendencia_2" loading="lazy"></a></div>
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_3.jpeg" alt="tendencia_3" loading="lazy"></a></div>
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_4.jpeg" alt="tendencia_4" loading="lazy"></a></div>
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_5.jpeg" alt="tendencia_5" loading="lazy"></a></div>
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_6.jpeg" alt="tendencia_6" loading="lazy"></a></div>
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_7.jpeg" alt="tendencia_7" loading="lazy"></a></div>
+                    <div><a href="./pages/detalle.html"><img src="./assets/img/tendencia_8.jpeg" alt="tendencia_8" loading="lazy"></a></div>
                 </div>
-          
-                <div>    
-                    <a href="./pages/detalle.html">                
-                        <img src="./assets/img/tendencia_2.jpeg" alt="Barbie">
-                        
-                    </a>
-                    <h3>Barbie</h3>
-                </div>
-                <div>  
-                    <a href="./pages/detalle.html">                  
-                        <img src="./assets/img/tendencia_3.jpeg" alt="Oppenheimer">
-                        
-                    </a>
-                    <h3>Oppenheimer</h3>
-                </div>
-                <div>     
-                    <a href="./pages/detalle.html">               
-                        <img src="./assets/img/tendencia_4.jpeg" alt="Napoleon">
-                        
-                    </a>
-                    <h3>Napoleón</h3>
-                </div>
-             
+
                 <button class="btnAnterior">Anterior</button>
                 <button class="btnSiguiente">Siguiente</button>
             </section>
             <hr>
             <!-- Sección Más aclamados -->
-            <section id="aclamdas">
+            <section id="aclamadas" class="peliculasAclamadas">
                 <h2>Las más aclamadas</h2>
-                <img src="./assets/img/aclamada_1.jpeg" alt="El Rapto">
-                <img src="./assets/img/aclamada_2.jpeg" alt="Avatar">
-                <img src="./assets/img/aclamada_3.jpeg" alt="La Sirenita">
-                <img src="./assets/img/aclamada_4.jpeg" alt="Transformers">
+                <div class="galeriaAclamadas">
+                    <div><img src="./assets/img/aclamada_1.jpeg" alt="aclamada_1" loading="lazy"></div>
+                    <div><img src="./assets/img/aclamada_2.jpeg" alt="aclamada_2" loading="lazy"></div>
+                    <div><img src="./assets/img/aclamada_3.jpeg" alt="aclamada_3" loading="lazy"></div>
+                    <div><img src="./assets/img/aclamada_4.jpeg" alt="aclamada_4" loading="lazy"></div>
+                    <div><img src="./assets/img/aclamada_5.jpeg" alt="aclamada_5" loading="lazy"></div>
+                    <div><img src="./assets/img/aclamada_6.jpeg" alt="aclamada_6" loading="lazy"></div>
+                    <div><img src="./assets/img/aclamada_7.jpeg" alt="aclamada_7" loading="lazy"></div>
+                    <div><img src="./assets/img/aclamada_8.jpeg" alt="aclamada_8" loading="lazy"></div>
+                </div>
+                
             </section>
         </main>
 
         <footer class="footer">
            <nav>
                 <ul>
-                    <li>
-                        <a href="">Términos y condiciones</a>
-                    </li>
-                    <li>
-                        <a href="">Preguntas frecuentes</a>
-                    </li>
-                    <li>
-                        <a href="">Ayuda</a>
-                    </li>
-                    <li>
-                        <a href="">Administrador Películas</a>
-                    </li>
-                </ul>
-
-                <a href="#principal" class="flechaArriba">
-                    <i class="fa-solid fa-arrow-up-from-bracket"></i>
-                </a>
-           </nav>
+                    <li><a href="">Términos y condiciones</a></li>
+                    <li><a href="">Preguntas frecuentes</a></li>
+                    <li><a href="">Ayuda</a></li>
+                    <li><a href="">Administrador Películas</a></li>
+                </ul>        
+            </nav>
+                <!--<a href="#main" class="flechaArriba">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i> -->
+                <!-- <a href="#main"><img src="./assets/img/Flecha_arriba.png" alt="ir arriba" class="flechaArriba"></a> -->
+                
+                <a href="#main"><img src="./assets/img/flecha-hacia-arriba.png" alt="ir arriba flecha" class="flechaArriba"></a>
         </footer>
         
     </body>
