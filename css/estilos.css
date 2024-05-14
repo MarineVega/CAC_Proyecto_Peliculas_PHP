@@ -73,6 +73,17 @@ h2{
     margin-bottom: 20px
 }
 
+/*media querys para dispositivos hasta 800px para el h1 y h2*/
+ 
+@media screen and (max-width: 800px) {
+    h1{
+        font-size: 2.2rem;
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+} 
+
 header, footer{
     background-color: var(--color-secundario);
     color: var(--color-cuarto);
@@ -80,8 +91,8 @@ header, footer{
 }
 
 /*estilos del header*/
-.header{
-    height: 10vh;
+.header, .headerRegistrarse, .headerInicioSesion{
+    height: 12vh;
     position: sticky;
     top: 0;    
     z-index: 10;    /*priorizo el header para que el resto de los objetos no se superpontan cuando se hace scroll*/
@@ -104,14 +115,38 @@ header, footer{
         ul{
             list-style: none;
             display: flex;
-            column-gap: 40px;
+            column-gap: 70px;
             a{
                 font-size: 1.3rem;
             }
+            li:hover{                
+                /* text-decoration: underline; */
+                border: 2px solid var(--color-cuarto);                
+                border-radius: 5px;
+                padding: 5px;
+            }
+            
+            /* & :hover{                
+            } */
         }
     }
 }
 
+@media screen and (max-width: 800px){
+    .header, .headerRegistrarse, .headerInicioSesion{
+        height: initial;
+        nav{
+            a{
+                font-size: 1rem;
+            }
+            row-gap: 20px;
+            ul{
+                flex-direction: column;
+                row-gap: 10px;
+            }
+        }
+    }
+}
 /*estilos sección principal*/
 /*
 main{
@@ -119,7 +154,7 @@ main{
 }
 */
 .seccionTitulos{
-    height: 55vh;
+    height: 75vh;
     background:linear-gradient(to right top, #0000009b, #0000009b), url(../assets/img/fondo_main.jpg);
     
     background-position: center;
@@ -150,13 +185,35 @@ main{
             border: 2px solid var(--color-cuarto);
             border-radius: 5px;
             padding: 10px 20px;
+
+            &:hover{
+                background-color: var(--color-principal);
+                color: var(--color-secundario) ;
+            }
         }
     }
 }
 
+@media screen and (max-width: 800px) {
+    .seccionTitulos{
+        height: 75vh;
+        background:linear-gradient(to center top, #0000009b, #0000009b), url(../assets/img/fondo_main.jpg);
+        
+        .contenedorTitulos{
+            width: 90%;
+            backdrop-filter: initial;
+            /* botón Registrate*/
+           a{
+                font-size: 1.5rem;
+            } 
+        }
+    }
+    
+}
 .seccionBusqueda{   
     height: 15vh; 
-    margin-top: 20px;     
+    margin-top: 20px;   
+    margin-bottom: 20px;  
     .contenedorBusqueda{
         text-align: center;
         
@@ -171,7 +228,16 @@ main{
             background-color: var(--color-cuarto);  
             border: 2px solid var(--color-secundario);          
             width: 450px;
+
+            &:focus {
+                border: 2px solid deepskyblue;
+                border: var(--color-secundario);
+                background: lightcyan;
+                outline: none;
+                box-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
+              }
         }
+        
         .btnBuscador{
             background-color: var(--color-secundario);
             border: 2px solid var(--color-cuarto);
@@ -200,16 +266,34 @@ main{
             height: 350px;                        
             border-radius: 10px;
              /*  box-shadow: 7px 6px 27px 2px rgba(25,100,126,0.56);    */
-             box-shadow: 7px 6px 27px 2px rgba(238,229,229,0.56);
+            box-shadow: 7px 6px 27px 2px rgba(238,229,229,0.56);
             img{    /*que las imagenes ocupen el 100% de su padre y no más*/
                 width: 100%;
                 height: 100%;
                 object-fit: cover;  /*pqra que las imagenes no se deformen*/               
                 border-radius: 10px;
+                filter: initial;              
+            } 
+            
+            &:hover{
+                transition: transform 0.5s;
+                transform: scale(1.1); 
+                /* escala de grises*/
+                filter: grayscale(70%);
             }
+           
+
+            /* &:hover{
+                transform: translate(500px 400px) scale(1.5);
+            } */
+
+            /* div:hover{
+                transform: translate(500px 400px) scale(1.5);
+            } */
+
         }
     }
-
+    
     button{
         margin-bottom: 20px;
         cursor: pointer;
@@ -221,6 +305,18 @@ main{
         width: 150px;       
         margin:20px;
     }
+
+    .btnAnterior:hover{
+        color: var(--color-principal);
+        font-size: 1.1rem;
+        border-color: var(--color-principal);
+    }
+    .btnSiguiente:hover{
+        color: var(--color-principal);
+        font-size: 1.1rem;
+        border-color: var(--color-principal);
+    }
+
 }
 
 
@@ -302,3 +398,64 @@ main{
     color: var(--color-quinto);  
     
 } */
+
+input:focus {
+    border: 2px solid deepskyblue;
+    border: var(--color-secundario);
+    background: lightcyan;
+    /* background: var(--color-quinto); */
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
+  }
+
+/* Estilos para registrarse.html */
+/* .bodyRegistrarse{
+    height: 100vh;;
+} */
+
+.mainRegistrarse{
+    height: 75vh;
+    background-color: rgb(42, 42, 42);
+    width: 50%;
+    top: 0;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        font-size: 1.2rem;
+
+        .inputRegistrarse, .selectPais, .inputArea{
+            padding: 5px;
+            font-size: 1.2rem;
+        };
+         
+       
+    }
+    .divTerminos{
+        flex-direction: row;        
+        label{
+            margin-left: 8px;
+            font-size: 0.9rem;
+        }
+    }
+
+/* 
+    .formRegistro{
+        background-color: aqua;        
+        display: block;    
+        flex-direction: column;
+        text-align: center;
+
+    } */
+}
