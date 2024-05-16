@@ -7,7 +7,8 @@
     <!-- estilos de CSS -->
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
-<body class="bodyInicioSesion">
+
+<body>
     <header class="headerInicioSesion">
         <nav>
             <a href="../index.html">  
@@ -16,12 +17,30 @@
             </a>
             <ul> 
                 <li><a href="../pages/registrarse.html">Registrarse</a></li>
-                <li><a href="../pages/inicioSesion.html">Iniciar Sesión</a></li>
+                <!-- <li><a href="../pages/inicioSesion.html">Iniciar Sesión</a></li> -->
             </ul>
         </nav>
     </header>
     
-    <main>
-        <h1>Página en construcción...</h1>
+    <main class="mainInicioSesion">
+        <h1>Iniciar Sesión</h1>
+
+        <form action="validar.php" method="post" class="formRegistro">
+            
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email" required class="inputRegistrarse">                
+            </div>
+            <div>
+                <label for="contrasenia">Contraseña</label>
+                <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" required class="inputRegistrarse">                
+            </div>
+              
+            <div>               
+                <input type="submit" value="Iniciar Sesión" class="boton">
+            </div>
+
+        </form>
+        
     </main>
 </body>

@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../css/estilos.css">
 
 </head>
-<!-- <body class="bodyRegistrarse"> -->
 <body>
     <header class="headerRegistrarse">
         <nav>
@@ -29,27 +28,27 @@
         <h1>Registro</h1>
         <form action="validar.php" method="post" class="formRegistro">
             <div>
-                <label for="nombre">Ingrese su Nombre:</label>                
+                <label for="nombre">Nombre</label>                
                 <input type="text" name="nombre" id="nombre" placeholder="Nombre" required class="inputRegistrarse">                
             </div>
             <div>
-                <label for="apellido">Ingrese su Apellido:</label>
+                <label for="apellido">Apellido</label>
                 <input type="text" name="apellido" id="apellido" placeholder="Apellido" required class="inputRegistrarse">                
             </div>
             <div>
-                <label for="email">Ingrese su Email:</label>
+                <label for="email">Email</label>
                 <input type="email" name="email" id="email" placeholder="Email" required class="inputRegistrarse">                
             </div>
             <div>
-                <label for="contrasenia">Ingrese la Contraseña:</label>
+                <label for="contrasenia">Contraseña</label>
                 <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" required class="inputRegistrarse">                
             </div>
             <div>
-                <label for="nacimiento">Ingrese su Fecha de Nacimiento:</label>
+                <label for="nacimiento">Fecha de Nacimiento</label>
                 <input type="date" name="nacimiento" id="nacimiento" placeholder="Nacimiento" required class="inputRegistrarse">                
             </div>
             <div>
-                <label for="pais">Ingrese su Pais:</label>
+                <label for="pais">Pais</label>
                 <select name="pais" id="pais" class="selectPais">
                     <option value="AR" selected>Argentina</option>
                     <option value="BR">Brasil</option>
@@ -66,12 +65,12 @@
             </div>
 
             <div>
-                <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Comentario" class="inputArea"></textarea>
+                <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Comentarios" class="inputArea"></textarea>
               </div>
               
-            <div>
-                <input type="reset">
-                <input type="submit" value="Registrarse">
+            <div class="divBotones">
+                <input type="reset" class="btnRegistrarse">
+                <input type="submit" value="Registrarse" class="btnRegistrarse">
             </div>
 
         </form>

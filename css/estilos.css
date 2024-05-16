@@ -207,9 +207,9 @@ main{
                 font-size: 1.5rem;
             } 
         }
-    }
-    
+    }    
 }
+
 .seccionBusqueda{   
     height: 15vh; 
     margin-top: 20px;   
@@ -244,6 +244,16 @@ main{
             color: var(--color-cuarto);
             width: 100px;
             cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .seccionBusqueda{
+        .contenedorBusqueda{
+            .inputBuscador{    
+                width: 300px
+            }
         }
     }
 }
@@ -318,7 +328,6 @@ main{
     }
 
 }
-
 
 .peliculasAclamadas{
     width: 80%;
@@ -408,18 +417,15 @@ input:focus {
     box-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
   }
 
-/* Estilos para registrarse.html */
-/* .bodyRegistrarse{
-    height: 100vh;;
-} */
+/* Estilos para registrarse.html y el main de inicioSesion.html*/
 
-.mainRegistrarse{
-    height: 75vh;
-    background-color: rgb(42, 42, 42);
+.mainRegistrarse, .mainInicioSesion{
+    background:linear-gradient(to right top, #0000009b, #0000009b), url(../assets/img/fondo_registrarse.jpg);
+  
     width: 50%;
+    height: 100%;
     top: 0;
     margin: 0 auto;
-    border-radius: 5px;
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
@@ -437,25 +443,76 @@ input:focus {
 
         .inputRegistrarse, .selectPais, .inputArea{
             padding: 5px;
-            font-size: 1.2rem;
-        };
-         
-       
+            font-size: 1.2rem;            
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        label{
+            color: var(--color-quinto);
+        }
     }
+
     .divTerminos{
-        flex-direction: row;        
+        flex-direction: row;
+
         label{
             margin-left: 8px;
             font-size: 0.9rem;
         }
     }
 
-/* 
-    .formRegistro{
-        background-color: aqua;        
-        display: block;    
-        flex-direction: column;
-        text-align: center;
+    .divBotones{       
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+        input{            
+            border-radius: 20px;              
+            padding: 0px 20px; 
+            font-size: 1rem;
+            color: var(--color-principal);
+            height: 40px;
+        }
+        
+        .btnRegistrarse{
+            background-color: var(--color-secundario);
+            border: 2px solid var(--color-cuarto);
+            color: var(--color-cuarto);
+            /* width: 100px; */
+            cursor: pointer;
+        
 
-    } */
+            &:hover{
+                color: var(--color-principal);
+                font-size: 1.1rem;
+                border-color: var(--color-principal);
+            }
+        }
+    } 
+}
+
+/* Estilos para inicioSesion.html */
+.mainInicioSesion{
+    input{            
+        border-radius: 20px;              
+        padding: 0px 20px; 
+        font-size: 1rem;
+        color: var(--color-principal);
+        height: 40px;
+    }
+    .boton{
+        background-color: var(--color-secundario);
+        border: 2px solid var(--color-cuarto);
+        color: var(--color-cuarto);
+        width: 300px;
+        cursor: pointer;
+        height: 40px; 
+
+        &:hover{
+            color: var(--color-principal);
+            font-size: 1.1rem;
+            border-color: var(--color-principal);
+        }
+    }
 }
