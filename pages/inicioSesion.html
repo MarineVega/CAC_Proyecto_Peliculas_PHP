@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +11,7 @@
 </head>
 
 <body>
+
     <header class="headerInicioSesion">
         <nav>
             <a href="../index.html">  
@@ -17,23 +20,24 @@
             </a>
             <ul> 
                 <li><a href="../pages/registrarse.html">Registrarse</a></li>
-                <!-- <li><a href="../pages/inicioSesion.html">Iniciar Sesión</a></li> -->
             </ul>
         </nav>
     </header>
-    
+
     <main class="mainInicioSesion">
         <h1>Iniciar Sesión</h1>
 
-        <form action="validar.php" method="post" class="formRegistro">
-            
+        <!-- <form action="validar.php" method="post" class="formRegistro"> -->
+        <form id="loginForm">            
             <div>
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Email" required class="inputRegistrarse">                
+                <input type="email" name="email" id="email" placeholder="Email" required class="inputRegistrarse"> 
+                <div id="emailError" class="mensaje-error"></div>
             </div>
             <div>
                 <label for="contrasenia">Contraseña</label>
                 <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" required class="inputRegistrarse">                
+                <div id="contraseniadError" class="mensaje-error"></div>
             </div>
               
             <div>               
@@ -43,4 +47,7 @@
         </form>
         
     </main>
+
+    <script src="../js/validarLogin.js"></script>
 </body>
+</html>

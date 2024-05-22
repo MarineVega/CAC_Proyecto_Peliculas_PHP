@@ -91,7 +91,7 @@ header, footer{
 }
 
 /*estilos del header*/
-.header, .headerRegistrarse, .headerInicioSesion{
+.header, .headerRegistrarse, .headerInicioSesion, .headerDetalle{
     height: 12vh;
     position: sticky;
     top: 0;    
@@ -133,7 +133,7 @@ header, footer{
 }
 
 @media screen and (max-width: 800px){
-    .header, .headerRegistrarse, .headerInicioSesion{
+    .header, .headerRegistrarse{
         height: initial;
         nav{
             a{
@@ -418,7 +418,6 @@ input:focus {
   }
 
 /* Estilos para registrarse.html y el main de inicioSesion.html*/
-
 .mainRegistrarse, .mainInicioSesion{
     background:linear-gradient(to right top, #0000009b, #0000009b), url(../assets/img/fondo_registrarse.jpg);
   
@@ -491,6 +490,13 @@ input:focus {
         }
     } 
 }
+/* 
+@media screen and (max-width: 800px) {
+    .mainInicioSesion{
+        width: 80%;
+
+    }
+} */
 
 /* Estilos para inicioSesion.html */
 .mainInicioSesion{
@@ -513,6 +519,71 @@ input:focus {
             color: var(--color-principal);
             font-size: 1.1rem;
             border-color: var(--color-principal);
+        }
+    }
+}
+
+/* Estilos para detalle.html */
+.mainDetalle{
+    margin-left: 10px;
+
+    .secciondetalle{ 
+        .imgDetalle{
+               
+            flex-shrink: 0;         /*para que no se achiquen las imágenes*/
+            border-radius: 20px;
+           
+            /* column-gap: 30px; */
+            margin: 30px;
+   
+            img{   
+                width: 100%;
+                height: 100%;
+                object-fit: cover;                
+                border-radius: 20px;
+            }            
+        }
+
+        column-gap: 30px;
+        display: flex;
+        align-content: space-between;
+        .textoDetalle{
+            margin-top: 30px;
+            h1{
+                /* padding-bottom: 0px; */
+                margin-bottom: 0px;
+            }
+            h2{
+                margin-top: 30px;
+            }
+
+            p{
+                width: 70%;
+            }
+            .contenedorCreditos{
+                margin-top: 30px; 
+                display: flex;
+                flex-direction: row; 
+                align-content: space-around;
+                column-gap: 50px; 
+                /* align-items: center; */
+                text-align: center;
+                
+            }
+        }        
+    }
+}
+
+
+@media screen and (max-width: 800px){
+    .secciondetalle{
+        display: flex;
+        flex-direction: column;
+
+        .textoDetalle{
+            align-content: center;            
+            text-align: center;      
+            
         }
     }
 }
