@@ -447,7 +447,7 @@ input:focus {
             color: var(--color-quinto);
         }
 
-        #emailError, #contraseniaError{
+        #nombreError, #apellidoError, #emailError, #contraseniaError, #nacimientoError{
             color: var(--color-quinto);
         }
     }

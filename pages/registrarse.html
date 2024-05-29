@@ -26,30 +26,30 @@
     <main class="mainRegistrarse">
         <!-- Títulos -->
         <h1>Registro</h1>
-        <form action="validar.php" method="post" class="formRegistro">
+        <form action="validar.php" method="post" class="formRegistro" id="formRegistro">
             <div>
                 <label for="nombre">Nombre</label>                
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre" required class="inputRegistrarse">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="inputRegistrarse">
                 <div id="nombreError" class="mensaje-error"></div>                  
             </div>
             <div>
                 <label for="apellido">Apellido</label>
-                <input type="text" name="apellido" id="apellido" placeholder="Apellido" required class="inputRegistrarse">  
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="inputRegistrarse">  
                 <div id="apellidoError" class="mensaje-error"></div>                
             </div>
             <div>
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Email" required class="inputRegistrarse">
+                <input type="email" name="email" id="email" placeholder="Email" class="inputRegistrarse">
                 <div id="emailError" class="mensaje-error"></div>                  
             </div>
             <div>
                 <label for="contrasenia">Contraseña</label>
-                <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" required class="inputRegistrarse">  
+                <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" class="inputRegistrarse">  
                 <div id="contraseniaError" class="mensaje-error"></div>                
             </div>
             <div>
                 <label for="nacimiento">Fecha de Nacimiento</label>
-                <input type="date" name="nacimiento" id="nacimiento" placeholder="Nacimiento" required class="inputRegistrarse"> 
+                <input type="date" name="nacimiento" id="nacimiento" placeholder="Nacimiento" class="inputRegistrarse"> 
                 <div id="nacimientoError" class="mensaje-error"></div>                 
             </div>
             <div>
@@ -83,5 +83,7 @@
     <footer>
 
     </footer>
+
+    <script src="../js/validarRegistrarse.js"></script>
 </body>
 </html>
