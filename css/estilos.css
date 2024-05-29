@@ -133,7 +133,7 @@ header, footer{
 }
 
 @media screen and (max-width: 800px){
-    .header, .headerRegistrarse{
+    .header, .headerRegistrarse, .headerDetalle{
         height: initial;
         nav{
             a{
@@ -147,12 +147,7 @@ header, footer{
         }
     }
 }
-/*estilos sección principal*/
-/*
-main{
 
-}
-*/
 .seccionTitulos{
     height: 75vh;
     background:linear-gradient(to right top, #0000009b, #0000009b), url(../assets/img/fondo_main.jpg);
@@ -451,6 +446,10 @@ input:focus {
         label{
             color: var(--color-quinto);
         }
+
+        #emailError, #contraseniaError{
+            color: var(--color-quinto);
+        }
     }
 
     .divTerminos{
@@ -491,13 +490,6 @@ input:focus {
         }
     } 
 }
-/* 
-@media screen and (max-width: 800px) {
-    .mainInicioSesion{
-        width: 80%;
-
-    }
-} */
 
 /* Estilos para inicioSesion.html */
 .mainInicioSesion{
@@ -528,10 +520,9 @@ input:focus {
 .mainDetalle{
     margin-left: 10px;
 
-    .secciondetalle{ 
+    .seccionDetalle{ 
         .imgDetalle{
-               
-            flex-shrink: 0;         /*para que no se achiquen las imágenes*/
+            flex-shrink: 0;         /*para que no se achiquen las imágenes*/            
             border-radius: 20px;
            
             /* column-gap: 30px; */
@@ -544,7 +535,6 @@ input:focus {
                 border-radius: 20px;
             }            
         }
-
         column-gap: 30px;
         display: flex;
         align-content: space-between;
@@ -557,7 +547,7 @@ input:focus {
             h2{
                 margin-top: 30px;
             }
-
+            
             p{
                 width: 70%;
             }
@@ -565,7 +555,7 @@ input:focus {
                 margin-top: 30px; 
                 display: flex;
                 flex-direction: row; 
-                align-content: space-around;
+                align-content: space-around;                
                 column-gap: 50px; 
                 /* align-items: center; */
                 text-align: center;
@@ -573,18 +563,62 @@ input:focus {
             }
         }        
     }
+    .seccionInfo{
+        display: flex;
+        column-gap: 30px;        
+        align-items: center;
+
+        .contenedorInfo{
+            display: flex;
+            flex-direction: column;      
+            align-items: center;
+            .redes{
+                margin-top: 30px;
+                margin-bottom: 30px;
+                ul{
+                    list-style: none;
+                    display: flex;
+                    column-gap: 40px;
+                    a{
+                        text-decoration: none;
+                        color: var(--color-terciario);
+                        font-size: 1.5rem;
+                        display: flex;
+                        align-items: center;                        
+                    }
+                    
+                }
+            }
+            .info{
+                table{
+                    tbody{
+                        tr{                            
+                            td{                                
+                                padding-left: 30px;
+                                padding-top: 20px;
+                            }
+                        }                    
+
+                    }
+                }
+            }
+        }
+    }
 }
 
 
 @media screen and (max-width: 800px){
-    .secciondetalle{
-        display: flex;
-        flex-direction: column;
-
-        .textoDetalle{
-            align-content: center;            
-            text-align: center;      
-            
+            .seccionDetalle, .seccionInfo{
+            display: flex;
+            flex-direction: column;            
+            align-items: center;
+            .imgDetalle, iframe{
+                width: 50%;
+            }
+            .textoDetalle{
+                text-align: center;   
+            }
         }
-    }
+       
+    
 }
